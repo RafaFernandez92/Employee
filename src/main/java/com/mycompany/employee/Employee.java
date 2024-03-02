@@ -4,7 +4,7 @@
  */
 
 package com.mycompany.employee;
-
+//Github: 
 /**
  *
  * @author User
@@ -14,18 +14,22 @@ public class Employee {
     String email;
     int empNum;
     
-    public nameEmail(String nameDef, String emailDef){
-        name = nameDef;
-        email = emailDef;
-        System.out.println(name + email);
+    public Employee(String nameDef, String emailDef){
+        this.name = nameDef;
+        this.email = emailDef;
+        }
+    
+    public Employee(int Num){
+        this.empNum = Num;
+        }
+    
+    static void incrementNum() {
+        int nextEmpnum = 1;
+        empNum = nextEmpnum++;
+        
     }
     
-    public employeeNum(int Num){
-        empNum = Num;
-        System.out.println(empNum);
-    }
     public static void main(String[] args) {
-        nameEmail first = new nameEmail("Rafael", "Def@defau.com");
-        System.out.println(first.name + first.email);
+    
     }
 }
