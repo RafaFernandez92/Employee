@@ -13,21 +13,35 @@ public class Employee {
     String name;
     String email;
     int empNum;
+    private int nextEmpNum = 1;
     
     public Employee(String nameDef, String emailDef){
         this.name = nameDef;
         this.email = emailDef;
+        this.empNum = nextEmpNum++;
         }
     
     public Employee(int Num){
         this.empNum = Num;
+        this.empNum = nextEmpNum++;
         }
-    
-    static void incrementNum() {
-        int nextEmpnum = 1;
-        empNum = nextEmpnum++;
+    //increment
+    public void incrementNum() {
+        empNum = nextEmpNum++;
         
     }
+    //Returners 
+    public String getName(){
+        return name;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public int getEmpNum(){
+        return nextEmpNum;
+    }
+    
+    
     
     public static void main(String[] args) {
     
