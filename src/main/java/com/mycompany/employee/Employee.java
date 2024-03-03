@@ -10,37 +10,69 @@ package com.mycompany.employee;
  * @author User
  */
 public class Employee {
-    String name;
-    String email;
-    int empNum;
+    private String name;
+    private String email;
+    private int empNum;
     private int nextEmpNum = 1;
     
+    /**
+     *
+     * @param nameDef
+     * @param emailDef
+     */
     public Employee(String nameDef, String emailDef){
         this.name = nameDef;
         this.email = emailDef;
         this.empNum = nextEmpNum++;
         }
     
+    /**
+     *
+     * @param Num
+     */
     public Employee(int Num){
         this.empNum = 1;
         this.empNum = nextEmpNum++;
         }
     //increment
+
+    /**
+     *
+     */
     public void incrementNum() {
         empNum = nextEmpNum++;
         
     }
     //Returners 
+
+    /**
+     *
+     * @return
+     */
     public String getName(){
         return name;
     }
+
+    /**
+     *
+     * @return
+     */
     public String getEmail(){
         return email;
     }
+
+    /**
+     *
+     * @return
+     */
     public int getEmpNum(){
         return empNum;
     }
     
+    /**
+     *
+     * @param email
+     */
     public void setEmail(String email) {
         if (email.length() > 3) {
             this.email = email;
@@ -48,10 +80,19 @@ public class Employee {
             System.out.println("Email must be at least 4 characters long.");
         }
     
-    public int getNextEmpNum(){
+    /**
+     *
+     * @return
+     */
+    public int getNextEmpNum(int NextEmpNum){
         return nextEmpNum;
     }   
-public static void main(String[] args) {
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
 
         }
 }
